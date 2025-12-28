@@ -8,7 +8,7 @@ if ($_SESSION['id']) { ?>
                 <a href="#"><img src="../img/avatar.png" class="ts-avatar hidden-side" alt="">Account <i class="fa fa-angle-down
                 hidden-side"></i></a>
                 <ul>
-                    <li><a href="../my-rofile.php">My account</a></li>
+                    <li><a href="../my-profile.php">My account</a></li>
                     <li><a href="../logout.php">Logout</a></li>
                 </ul>
             </li>
