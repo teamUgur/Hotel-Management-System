@@ -196,7 +196,7 @@ INSERT INTO `userlog` (`id`, `userId`, `userEmail`, `userIp`, `city`, `country`,
 
 CREATE TABLE `userregistration` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `regNo` varchar(255) DEFAULT NULL,
+  `regno` varchar(255) DEFAULT NULL,
   `firstName` varchar(255) DEFAULT NULL,
   `middleName` varchar(255) DEFAULT NULL,
   `lastName` varchar(255) DEFAULT NULL,

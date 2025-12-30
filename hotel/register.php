@@ -2,7 +2,7 @@
 session_start();
 include './includes/checklogin.php';
 if (isset($_SESSION['submit'])) {
-    $regno = $_POST['regNo'];
+    $regno = $_POST['regno'];
     $fname = $_POST['firstName'];
     $mname = $_POST['middleName'];
     $lname = $_POST['lastName'];
@@ -11,7 +11,7 @@ if (isset($_SESSION['submit'])) {
     $emailid = $_POST['email'];
     $password = $_POST['password'];
 
-    $result = "SELECT count(*) FROM userregistration WHERE email=? || regNo=?";
+    $result = "SELECT count(*) FROM userregistration WHERE email=? || regno=?";
     $stmt = $mysqli->prepare($result);
     $stmt->bind_param("ss", $emailid, $regno);
     $stmt->execute();
@@ -23,7 +23,7 @@ if (isset($_SESSION['submit'])) {
     if ($count > 0) {
         echo "<script>alert('Email or phone number are already redistred.')</script>";
     } else {
-        $query = "INSERT INTO userregistration (regNo, firstName, middleName, lastName, gender, contactNo, email, password) VALUES
+        $query = "INSERT INTO userregistration (regno, firstName, middleName, lastName, gender, contactNo, email, password) VALUES
         (?,?,?,?,?,?,?,?)";
         $stmt = $mysqli->prepare($query);
         $rc = $stmt->bind_param('sssssiss', $regno, $fname, $mname, $lname, $gender, $contact, $emailid, $password);
@@ -108,6 +108,12 @@ if (isset($_SESSION['submit'])) {
             width: 100px;
             font-size: 15px;
         }
+
+        .loaderIcon {
+            display: none; 
+            margin-left: 10px; 
+            color: blue;
+        }
         
     </style>
     <script>
@@ -127,10 +133,6 @@ if (isset($_SESSION['submit'])) {
         <div>
             <?php include "./includes/sidebar.php" ?>
         </div>
-
-        <span id="loaderIcon" style="display:none; margin-left: 10px; color: blue;">
-            ⏳ Checking...
-        </span>
 
         <div class="main-text">
             <h2>Student Registration</h2>
@@ -182,6 +184,7 @@ if (isset($_SESSION['submit'])) {
                 <div class="form-group">
                     <label class="control-label">Email id:</label>
                     <input type="text" name="emaolId" id="email" class="default-input" required="required" onBlur="checkAvailability()">
+                    <span id="loaderIcon">⏳ Checking...</span>
                     <span id="user-availability-status" style="font-size:12px;"></span> <!-- IMPORTANT !-->
                 </div>
 
@@ -212,8 +215,8 @@ if (isset($_SESSION['submit'])) {
                 data: 'emailid' + $("#email").val(),
                 type: "POST",
                 success:function(data) {
-                    $("user-availability-status").html(data);
-                    $("loaderIcon").hide();
+                    $("#user-availability-status").html(data);
+                    $("#loaderIcon").hide();
                 },
                 error:function() {
                     event.preventDefault();
@@ -229,8 +232,8 @@ if (isset($_SESSION['submit'])) {
                 data: 'regno' + $("#regno").val(),
                 type: "POST",
                 success:function(data) {
-                    $("user-reg-availability").html(data);
-                    $("loaderIcon").hide();
+                    $("#user-reg-availability").html(data);
+                    $("#loaderIcon").hide();
                 },
                 error:function() {
                     event.preventDefault();
