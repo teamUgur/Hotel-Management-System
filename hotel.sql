@@ -6,7 +6,7 @@ DROP DATABASE IF EXISTS hotel;
 CREATE DATABASE IF NOT EXISTS hotel;
 
 DROP USER IF EXISTS 'hotel_user'@'%';
-CREATE USER IF NOT EXISTS 'hotel_user'@'%' IDENTIFIED BY password;
+CREATE USER IF NOT EXISTS 'hotel_user'@'%' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON hotel.* TO 'hotel_user'@'%';
 USE hotel;
 
