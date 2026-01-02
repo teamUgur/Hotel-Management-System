@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -71,22 +72,34 @@ body {
 
 /* Login LOGIC!  */
 
-.login-section  {
-    /* border: 1px solid black; */
-    width: 50%;
-    height: 100vh;
+#login {
     position: absolute;
     left: 736px;
     top: 0px;
+    height: 100vh;
+    width: 50%;
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
 }
 
-.login-section #logo {
+#signup {
+    position: absolute;
+    left: 736px;
+    top: 0px;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-signup-section #logo {
     width: 180px;
     height: 140px;
-    margin: 70px 0 30px 0;
+    margin: 0 0 30px 0;
 }
 
 .changeBtn {
@@ -114,12 +127,28 @@ input {
   padding-left: 10px;
 }
 
-#login-btn {
+.login-btn {
     padding: 10px 0;
     margin: 15px 0 0 0;
+    background-color: rgb(214, 214, 214);
+    border: none;
 }
 
 .page_move_btn{
     color: rgba(0, 0, 255, 0.599);
     cursor: pointer;
+}
+
+/* display on */
+
+.user-login.active{
+    display: block;
+}
+
+.employee-login.active{
+    display: block;
+}
+
+#signup {
+    display: none;
 }
