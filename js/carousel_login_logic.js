@@ -43,3 +43,5 @@ indicators.forEach((dot, index) => {
 })
 
 resetTimer();
+
+// Login LOGIC! 
