@@ -23,97 +23,8 @@ function prepareAndExecute ($conn, $sql, $params) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carusel</title>
-    <link href="http://localhost/hotel-management-system/css/login.css" rel="stylesheet">
+    <link href="/css/login.css" rel="stylesheet">
 </head>
-<!-- <style>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(183, 183, 183);
-    }
-
-    body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .carusel-container {
-        width: 100%;
-        height: 300px;
-        position: relative;
-        /* overflow: hidden; */
-    }
-
-    .carusel-slide {
-        display: none;
-        width: 100%;
-        height: 100%;
-    }
-
-    .carusel-slide.active {
-        display: active;
-    }
-
-    .carusel-slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .carousel-dots {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 10px;
-    }
-
-    .dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.5);
-        cursor: pointer;
-    }
-
-    .dot.active {
-        background-color: white;
-    }
-</style> -->
-<!-- <script>
-    let currentSlide = 0;
-    let slides = document.querySelectorAll('carousel-slide');
-    let dots = document.querySelectorAll('dot');
-    totalSlides = slides.length;
-
-    function showSlides(n) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
-
-    currentSlide = (n + currentSlide) % totalSlides;
-    slides[currentSlide].classList.add('active');
-    dots[currentSlide].classList.add('active');
-    }
-
-    function rotateCarusel() {
-        currentSlide = (currentSlide + 1) % currentSlide;
-        showSlides(currentSlide);
-    }
-
-    showSlides(0);
-    const slideInterval = setInterval(rotateCarusel, 5000);
-
-    dots.forEach(dot => dot.addEventListener('click', function() {
-        const slideIndex = parseInt(this.getAttribute('data-slide'));
-        showSlides(slideIndex);
-        clearInterval(slideInterval);
-        slideInterval = setInterval(rotateCarusel, 5000);
-    }))
-</script> -->
 <body>
     <div class="carusel-container">
 
@@ -133,15 +44,17 @@ function prepareAndExecute ($conn, $sql, $params) {
             <img src="./img/hotel 4.JPG" alt="Room 4">
         </div>
 
-        <div class="carousel-dots">
-            <div class="dot active" data-slide="0"></div>
-            <div class="dot" data-slide="1"></div>
-            <div class="dot" data-slide="2"></div>
-            <div class="dot" data-slide="3"></div>
-        </div>
+        <button id="prevBtn" class="carousel-button prev">&#10094;</button>
+        <button id="nextBtn" class="carousel-button next">&#10095;</button>
 
+        <div class="carousel-nav">
+            <button class="carousel-indicator current-slide"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+        </div>
     </div>
 
-    <script src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
 </body>
 </html>
