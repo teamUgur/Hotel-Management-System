@@ -100,7 +100,7 @@ if (isset($_POST['user_signup_submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carusel</title>
+    <title>Login</title>
     <link href="./css/carousel_login_logic.css" rel="stylesheet">
     <script type="module" src="./js/carousel_login_logic.js"></script>
 </head>
