@@ -153,9 +153,39 @@ function prepareAndExecute ($conn, $sql, $params) {
         <!-- Sign Up -->
          <!-- PHP -->
 
-            
+        <?php
+        if (isset($_POST['user_signup_submit'])) {
+            $username = $_POST['Username'];
+            $email = $_POST['Email'];
+            $password = $_POST['Password'];
+            $cpassword = $_POST['Cpassword'];
 
-            <!-- HTML -->
+            if ($password == $cpassword) {
+                $sql = 'SELECT * FROM signup WHERE Email = ?';
+                $stmt = prepareAndExecute($conn, $sql, [$email]);
+                $result = $stmt->get_result;
+
+                if ($result->num_rows > 0) {
+                    echo "<script>swal({ title: 'Email already exists', icon: 'error', });</script>";
+                } else {
+                    $sql_insert = 'INSERT INTO signup (Username, Email, Password) VALUES (?, ?, ?)';
+                    $stmt_insert = prepareAndExecute($conn, $sql, [$username, $email, $password]);
+
+                    if($stmt_insert->affected_rows > 0) {
+                        $_SESSION['usermail'] = $email;
+                        header("Location: home.php");
+                        exit();
+                    } else {
+                        echo "<script>swal({ title: 'Something went wrong', icon: 'error', });</script>";
+                    }
+                }
+            }
+        } else {
+            echo "<script>swal({ title: 'Passwords not matched', icon: 'error', });</script>";
+        }
+        ?>
+
+        <!-- HTML -->
 
         <div id="signup" class="hidden">
             <h2>Sign Up</h2>
