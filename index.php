@@ -62,39 +62,54 @@ function prepareAndExecute ($conn, $sql, $params) {
 
     <section class="login-signup-section">
 
+        <!-- LOGIN -->
+
         <div id="login">
 
-            <!-- User Login -->
-             
-            <img src="./img/logo.png" alt="logo" id="logo">
+            <div id="logo-area">
+                <img src="./img/logo.png" alt="logo" id="logo">
+            </div>
+            
             <h2>Log In</h2>
-            <div id="user-change-buttons">
+
+            <div class="button-group ">
                 <button class="changeBtn active">User</button>
                 <button class="changeBtn">Staff</button>
             </div>
 
-            <form class="input-area user-login active authsection" id="userlogin" action="" method="POST">
-                <input type="text" name="username" placeholder="Username:" required>
-                <input type="text" name="email" placeholder="Email:" required>
-                <input type="password" name="password" placeholder="Password:" required>
-                <button class="login-btn">Log In</button>
-                <p>Don't have an account? <span class="page_move_btn" onclick="signupPage()">Sign Up</span></p>
-            </form>
+            <!-- User Login -->
+
+            <div id="userForm" class="form-container">
+                <form action="" method="POST" class="form-inputs">
+                    <label for="userUsername">Username</label>
+                    <input type="text" id="userUsername" name="userUsername">
+                    <label for="userEmail">Email:</label>
+                    <input type="email" id="userEmail" name="userEmail">
+                    <label for="userPassword">Password:</label>
+                    <input type="password" id="userPassword" name="userPassword">
+                    <button type="submit">Login as User</button>
+                    <p>Don't have an account? <span class="page_move_btn" onclick="signupPage()">Sign Up</span></p>
+                </form>
+            </div>
 
             <!-- Employee Login -->
 
-            <form class="employee-login input-area authsection" id="employeelogin" action="" method="POST">
-                <input type="text" name="email" placeholder="Email:" required>
-                <input type="password" name="password" placeholder="Password:" required>
-                <button type="submit" name="Emp_login_submit" class="login-btn">Log in</button>
-            </form>
+            <div id="staffForm" class="form-container hidden">
+                <form action="" method="POST" class="form-inputs">
+                    <label for="staffEmail">Email:</label>
+                    <input type="text" id="staffUsername" name="staffEmail">
+                    <label for="staffPassword">Password:</label>
+                    <input type="password" id="staffPassword" name="staffPassword">
+                    <button type="submit">Login as Staff</button>
+                    <p>Don't have an account? <span class="page_move_btn" onclick="signupPage()">Sign Up</span></p>
+                </form>
+            </div>
         </div>
-
         <!-- Sign Up -->
 
         <div id="signup">
             <h2>Sign Up</h2>
-            <form class="input-area user-signup" action="" method="POST">
+            <form action="" method="POST">
                 <input type="text" name="username" placeholder="Username:" required>
                 <input type="text" name="email" placeholder="Email:" required>
                 <input type="password" name="password" placeholder="Password:" required>
