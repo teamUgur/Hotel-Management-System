@@ -79,34 +79,83 @@ function prepareAndExecute ($conn, $sql, $params) {
             </div>
 
             <!-- User Login -->
+            <!-- PHP -->
+            
+            <?php
+            if (isset($_POST['user_login_submit'])) {
+                $email = $_POST['Email'];
+                $password = $_POST['Password'];
 
-            <div id="userForm" class="form-container">
+                $sql = 'SELECT * FROM signup WHERE Email = ? AND Password = BINARY ?';
+                $stmt = prepareAndExecute($conn, $sql, [$email, $password]);
+                $result = $stmt->get_result;
+
+                if ($result->num_rows>0) {
+                    $_SESSION['usermail'] = $email;
+                    header("Location: home.php");
+                    exit();
+                } else {
+                    echo "<script>swal({ title: 'Something went wrong', icon: 'error', });</script>";
+                }
+            }
+            ?>
+
+            <!-- HTML -->
+             <div id="userForm" class="form-container">
                 <form action="" method="POST" class="form-inputs">
                     <label for="userUsername">Username</label>
-                    <input type="text" id="userUsername" name="userUsername">
+                    <input type="text" id="userUsername" name="userUsername" required>
                     <label for="userEmail">Email:</label>
-                    <input type="email" id="userEmail" name="userEmail">
+                    <input type="email" id="userEmail" name="userEmail" required>
                     <label for="userPassword">Password:</label>
-                    <input type="password" id="userPassword" name="userPassword">
-                    <button type="submit">Login as User</button>
+                    <input type="password" id="userPassword" name="userPassword" required>
+                    <button type="submit" name="user_login_submit">Login as User</button>
                     <p>Don't have an account? <span class="page_move_btn" onclick="signupPage()">Sign Up</span></p>
                 </form>
             </div>
 
             <!-- Employee Login -->
+             <!-- PHP -->
+
+            <?php
+            if (isset($_POST['Emp_login_submit'])) {
+                $email = $_POST['Emp_Email'];
+                $password = $_POST['Emp_Password'];
+
+                $sql = 'SELECT * FROM emp_login WHERE Emp_Email = ? AND Emp_Password= BINARY ?';
+                $stmt = prepareAndExecute($conn, $sql, [$email, $password]);
+                $result = $stmt->get_result;
+
+                if ($result->num_rows > 0) {
+                    $_SESSION['usermail'] = $email;
+                    header("Location ./admin/admin.php");
+                    exit();
+                } else {
+                    echo "<script>swal({ title: 'Something went wrong', icon: 'error', })</script?";
+                }
+            }
+            ?>
+
+            <!-- HTML -->
 
             <div id="staffForm" class="form-container hidden">
                 <form action="" method="POST" class="form-inputs">
                     <label for="staffEmail">Email:</label>
-                    <input type="text" id="staffUsername" name="staffEmail">
+                    <input type="text" id="staffUsername" name="staffEmail" required>
                     <label for="staffPassword">Password:</label>
-                    <input type="password" id="staffPassword" name="staffPassword">
-                    <button type="submit">Login as Staff</button>
+                    <input type="password" id="staffPassword" name="staffPassword" required>
+                    <button type="submit" name="Emp_login_submit">Login as Staff</button>
                     <p>Don't have an account? <span class="page_move_btn" onclick="signupPage()">Sign Up</span></p>
                 </form>
             </div>
         </div>
+
         <!-- Sign Up -->
+         <!-- PHP -->
+
+            
+
+            <!-- HTML -->
 
         <div id="signup" class="hidden">
             <h2>Sign Up</h2>
@@ -115,7 +164,7 @@ function prepareAndExecute ($conn, $sql, $params) {
                 <input type="text" name="email" placeholder="Email:" required>
                 <input type="password" name="password" placeholder="Password:" required>
                 <input type="password" name="cpassword" placeholder="Confirm password:" required>
-                <button class="login-btn">Log In</button>
+                <button class="login-btn" name="user_signup_submit">Log In</button>
                 <p>Already have an account? <span class="page_move_btn" onclick="loginPage()">Log in</span></span></p>
             </form>
         </div>
