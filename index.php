@@ -73,8 +73,8 @@ function prepareAndExecute ($conn, $sql, $params) {
             <h2>Log In</h2>
 
             <div class="button-group ">
-                <button class="changeBtn active">User</button>
-                <button class="changeBtn">Staff</button>
+                <button id="userBtn" class="changeBtn active">User</button>
+                <button id="staffBtn" class="changeBtn">Staff</button>
             </div>
 
             <!-- User Login -->

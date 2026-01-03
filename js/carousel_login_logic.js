@@ -44,40 +44,63 @@ indicators.forEach((dot, index) => {
 
 resetTimer();
 
-// Login & Signup LOGIC! 
+// Login LOGIC! 
 
-const login = document.getElementById("login");
-const signup = document.getElementById("signup");
+const userBtn = document.getElementById("userBtn");
+const staffBtn = document.getElementById("staffBtn");
+const userForm = document.getElementById("userForm");
+const staffForm = document.getElementById("staffForm");
 
-signupPage = () => {
-    login.style.display = 'none';
-    signup.style.display = 'flex';
+function changeState(toShowForm, toHideForm, toShowBtn, toHideBtn) {
+    toShowForm.classList.remove("hidden");
+    toHideForm.classList.add("hidden");
+    
+    toShowBtn.classList.add("active");
+    toHideBtn.classList.remove("active");
 }
 
-loginPage = () => {
-    login.style.display = 'flex';
-    signup.style.display = 'none';
-}
-
-const btns = querySelectorAll(".changeBtn ");
-const auth = querySelectorAll(".authsection");
-
-function changeActive(index) {
-
-    btns.forEach((btn) => {
-        btn.classList.remove("active");
-    })
-
-    auth.forEach((slide) => {
-        slide.classList.remove("active");
-    })
-
-    btns[index].classList.add("active");
-    auth[index].classList.add("active");
-}
-
-btns.forEach((btn, i) => {
-    btn.addEventListener("click", function() {
-        changeActive(i);
-    })
+userBtn.addEventListener("click", function() {
+    changeState(userForm, staffForm, userBtn, staffBtn);
 })
+
+staffBtn.addEventListener("click", function() {
+    changeState(staffForm, userForm, staffBtn, userBtn);
+})
+
+// const login = document.getElementById("login");
+// const signup = document.getElementById("signup");
+
+// signupPage = () => {
+//     login.style.display = 'none';
+//     signup.style.display = 'flex';
+// }
+
+// loginPage = () => {
+//     login.style.display = 'flex';
+//     signup.style.display = 'none';
+// }
+
+// const btns = querySelectorAll(".changeBtn ");
+// const auth = querySelectorAll(".authsection");
+
+// function changeActive(index) {
+
+//     btns.forEach((btn) => {
+//         btn.classList.remove("active");
+//     })
+
+//     auth.forEach((slide) => {
+//         slide.classList.remove("active");
+//     })
+
+//     btns[index].classList.add("active");
+//     auth[index].classList.add("active");
+// }
+
+// btns.forEach((btn, i) => {
+//     btn.addEventListener("click", function() {
+//         changeActive(i);
+//     })
+// })
+
+// Signup LOGIC! 
