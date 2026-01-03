@@ -85,6 +85,7 @@ body {
 
 #logo-area {
     width: 100%;
+    margin-top: 75px;
     height: 140px;
     align-items: center;
     display: flex;
@@ -92,6 +93,7 @@ body {
 }
 
 #logo {
+    
     width: 180px;
     height: 140px;
 }
@@ -139,4 +141,14 @@ form button {
     cursor: pointer;
     font-size: 15px;
     font-weight: bold;
+}
+
+/* Signup LOGIC */
+
+.page_move_btn{
+    color: rgba(0, 0, 255, 0.599);
+    cursor: pointer;
+}
+.page_move_btn:hover{
+    color: blue;
 }

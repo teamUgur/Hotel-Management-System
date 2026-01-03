@@ -24,6 +24,7 @@ function prepareAndExecute ($conn, $sql, $params) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carusel</title>
     <link href="./css/carousel_login_logic.css" rel="stylesheet">
+    <script type="module" src="./js/carousel_login_logic.js"></script>
 </head>
 <body>
     <!-- CAROUSEL -->
@@ -62,13 +63,13 @@ function prepareAndExecute ($conn, $sql, $params) {
 
     <section class="login-signup-section">
 
+        <div id="logo-area">
+            <img src="./img/logo.png" alt="logo" id="logo">
+        </div>
+
         <!-- LOGIN -->
 
         <div id="login">
-
-            <div id="logo-area">
-                <img src="./img/logo.png" alt="logo" id="logo">
-            </div>
             
             <h2>Log In</h2>
 
@@ -107,7 +108,7 @@ function prepareAndExecute ($conn, $sql, $params) {
         </div>
         <!-- Sign Up -->
 
-        <div id="signup">
+        <div id="signup" class="hidden">
             <h2>Sign Up</h2>
             <form action="" method="POST">
                 <input type="text" name="username" placeholder="Username:" required>
@@ -120,6 +121,5 @@ function prepareAndExecute ($conn, $sql, $params) {
         </div>
         
     </section>
-    <script type="module" src="./js/carousel_login_logic.js"></script>
 </body>
 </html>

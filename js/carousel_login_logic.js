@@ -67,40 +67,20 @@ staffBtn.addEventListener("click", function() {
     changeState(staffForm, userForm, staffBtn, userBtn);
 })
 
-// const login = document.getElementById("login");
-// const signup = document.getElementById("signup");
-
-// signupPage = () => {
-//     login.style.display = 'none';
-//     signup.style.display = 'flex';
-// }
-
-// loginPage = () => {
-//     login.style.display = 'flex';
-//     signup.style.display = 'none';
-// }
-
-// const btns = querySelectorAll(".changeBtn ");
-// const auth = querySelectorAll(".authsection");
-
-// function changeActive(index) {
-
-//     btns.forEach((btn) => {
-//         btn.classList.remove("active");
-//     })
-
-//     auth.forEach((slide) => {
-//         slide.classList.remove("active");
-//     })
-
-//     btns[index].classList.add("active");
-//     auth[index].classList.add("active");
-// }
-
-// btns.forEach((btn, i) => {
-//     btn.addEventListener("click", function() {
-//         changeActive(i);
-//     })
-// })
-
 // Signup LOGIC! 
+
+const login = document.getElementById("login");
+const signup = document.getElementById("signup");
+
+function signupPage() {
+    signup.classList.remove("hidden");
+    login.classList.add("hidden");
+}
+
+function loginPage() {
+    login.classList.remove("hidden");
+    signup.classList.add("hidden");
+}
+
+window.signupPage = signupPage;
+window.loginPage = loginPage;
