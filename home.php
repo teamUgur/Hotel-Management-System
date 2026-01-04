@@ -1,13 +1,16 @@
 <?php
-include "./config.php";
+
+include 'config.php';
 session_start();
 
-if(isset($_SESSION['Email']) || empty($_SESSION['Email'])) {
-    header("Location: ./index.php");
-    exit();
-}
+// page redirect
+$usermail="";
+$usermail=$_SESSION['usermail'];
+if ($usermail == true){
 
-$userEmail = $_SESSION['Email'];
+} else{ 
+  header("location: index.php");
+}
 
 ?>
 
