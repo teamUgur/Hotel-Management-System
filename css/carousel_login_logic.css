@@ -143,6 +143,11 @@ form button {
     font-weight: bold;
 }
 
+.error-message {
+    color: red;
+    margin: 20px 0;
+}
+
 /* Signup LOGIC */
 
 .page_move_btn{
@@ -152,3 +157,4 @@ form button {
 .page_move_btn:hover{
     color: blue;
 }
+
