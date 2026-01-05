@@ -40,8 +40,8 @@ if ($usermail == true){
 
     <section id="firstsection">
 
-        <div class="inner">
-            <img src="./img/hotel 5.png" alt="hotel" class="main-start-img">
+        <div class="img-back-section" id="inner-section">
+            <!-- <img src="./img/hotel 5.png" alt="hotel" class="main-start-img"> -->
             <div id="welcome-line">
                 <h1 class="welcometag">Welcome to heaven on earth</h1>
             </div>
@@ -166,7 +166,7 @@ if ($usermail == true){
     </section>
 
     <section id="secondsection">
-        <div id="our-room-section">
+        <div class="img-back-section" id="our-room-section">
             <!-- <img src="./img/background-rooms.jpg" alt="background-of-rooms" class="main-start-img"> -->
             <div>
                 <h2>Our Rooms</h2>

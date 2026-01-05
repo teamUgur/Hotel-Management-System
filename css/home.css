@@ -46,29 +46,26 @@ a {
 
 /* FIRST HOME SECTION */
 
-#firstsection .inner {
-    position: relative;
-    width: 100%;
-}
-
-.main-start-img {
+.img-back-section {
+    background-size: cover;
     width: 100%;
     height: 100vh;
-    object-fit: cover;
-    display: block;
+    position: relative;
+}
+
+#inner-section {
+    background-image: url("../img/hotel\ 5.png");
 }
 
 #welcome-line {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 100;
-}
+} 
 
 .welcometag {
     color: white;
@@ -83,8 +80,4 @@ a {
 
 #our-room-section {
     background-image: url("../img/background-rooms.jpg");
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    position: relative;
 }
