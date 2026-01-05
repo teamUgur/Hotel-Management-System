@@ -32,11 +32,13 @@ if ($usermail == true){
             <li><a href="#firstsection">Home</a></li>
             <li><a href="#secondsection">Rooms</a></li>
             <li><a href="#thirdsection">Facilities</a></li>
-            <li><a href="#fourthsection">Connect Us</a></li>
+            <li><a href="#contactus">Connect Us</a></li>
             <a href="./logout.php"><button class="btn btn-danger">Logout</button></a>
         </ul>
 
     </nav>
+
+    <!-- FIRST SECTION -->
 
     <section id="firstsection">
 
@@ -165,10 +167,12 @@ if ($usermail == true){
         </div>
     </section>
 
+    <!-- SECOND SECTION -->
+
     <section id="secondsection">
         <img src="./img/background-rooms.jpg" alt="background" id="bkg-img-sec-2">
         <div class="our-room">
-            <h1 class="head">Our room</h1>
+            <h1 class="head">≼ Our room ≽</h1>
             <div class="room-select">
 
                 <div class="room-box">
@@ -228,6 +232,36 @@ if ($usermail == true){
             </div>
         </div>
     </section>
+
+    <!-- THIRD SECTION -->
+
+    <section id="thirdsection">
+
+        <h1 class="head">≼ Facilities ≽</h1>
+        <div class="facility">
+
+        <div class="box">
+            <h2>Swiming pool</h2>
+        </div>
+
+        <div class="box">
+            <h2>Spa</h2>
+        </div>
+
+        <div class="box">
+            <h2>24*7 Restaurants</h2>
+        </div>
+
+        <div class="box">
+            <h2>24*7 Gym</h2>
+        </div>
+
+        <div class="box">
+            <h2>Heli service</h2>
+        </div>
+
+        </div>
+    </section>   
 
 </body>
 </html>

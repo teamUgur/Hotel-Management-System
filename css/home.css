@@ -166,3 +166,38 @@ a {
 .bookbtn{
    margin: 10px;
 }
+
+/* THIRD SECTION */
+
+#thirdsection{
+    height: 80vh;
+    width: 100%;
+    /* background-color: black; */
+}
+
+.facility{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.facility .box{
+    height: 100%;
+    width: 310px;
+    border: 2px solid white;
+    background-color: #0040ff;
+}
+
+.facility .box h2{
+    text-align: center;
+    position: relative;
+    top: 80%;
+    color: white;
+    background-color: #0000005e;
+}
+
+/* roombookcss */
+
+
+/* responsive stuff */
