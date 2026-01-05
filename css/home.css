@@ -218,6 +218,34 @@ a {
     background-size: cover
 }
 
+/* contactus */
+
+#contactus{
+    height: 70px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 100px;
+}
+
+#contactus .social{
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#contactus i{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#contactus .createdby{
+    color: white;
+}
+
 /* roombookcss */
 
 
