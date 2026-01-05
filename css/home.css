@@ -47,20 +47,24 @@ a {
 /* FIRST HOME SECTION */
 
 .img-back-section {
-    background-size: cover;
+    position: relative;
     width: 100%;
     height: 100vh;
-    position: relative;
 }
 
-#inner-section {
-    background-image: url("../img/hotel\ 5.png");
-}
-
-#welcome-line {
+.main-start-img {
     position: absolute;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.on-img-els {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,6 +82,87 @@ a {
 
 /* SECOND HOME SECTION */
 
-#our-room-section {
-    background-image: url("../img/background-rooms.jpg");
+#secondsection {
+    height: 100vh;
+}
+
+#bkg-img-sec-2 {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -2;
+}
+
+.our-room {
+    position: relative;
+    top: 90px;
+    height: 400px;
+    width: 100%;
+}
+
+.head{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.room-select {
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.room-box {
+    height: 100%;
+    width: 300px;
+    background-color: rgb(8, 8, 48);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.hotelphoto {
+    height: 250px;
+    width: 100%;
+    background-color: aquamarine;
+    background-size: cover;
+}
+
+.h1 {
+    background-image: url("../img/room-3.JPG");
+    background-size: cover;
+}
+
+.h2 {
+    background-image: url("../img/room-4.JPG");
+    background-size: cover;
+}
+
+.h3 {
+    background-image: url("../img/room-1.JPG");
+    background-size: cover;
+}
+
+.h4 {
+    background-image: url("../img/room-2.JPG");
+    background-size: cover;
+}
+
+.room-data {
+    text-align: center;
+    color: white;
+}
+
+.roomdata h2{
+    font-size: 30px;
+}
+
+.sevices{
+    display: flex;
+}
+
+.services i{
+    margin: 7px;
+}
+
+.bookbtn{
+   margin: 10px;
 }

@@ -41,8 +41,8 @@ if ($usermail == true){
     <section id="firstsection">
 
         <div class="img-back-section" id="inner-section">
-            <!-- <img src="./img/hotel 5.png" alt="hotel" class="main-start-img"> -->
-            <div id="welcome-line">
+            <img src="./img/hotel 5.png" alt="hotel" class="main-start-img">
+            <div class="on-img-els">
                 <h1 class="welcometag">Welcome to heaven on earth</h1>
             </div>
         </div>
@@ -166,14 +166,15 @@ if ($usermail == true){
     </section>
 
     <section id="secondsection">
-        <div class="img-back-section" id="our-room-section">
-            <!-- <img src="./img/background-rooms.jpg" alt="background-of-rooms" class="main-start-img"> -->
-            <div>
-                <h2>Our Rooms</h2>
-                <div id="room-data">
+        <img src="./img/background-rooms.jpg" alt="background" id="bkg-img-sec-2">
+        <div class="our-room">
+            <h1 class="head">Our room</h1>
+            <div class="room-select">
 
-                    <div id="first-room">
-                        <h3>Superior Room</h3>
+                <div class="room-box">
+                    <div class="hotelphoto h1"></div>
+                    <div class="room-data">
+                        <h2>Superior Room</h2>
                         <div class="services">
                             <i class="fa-solid fa-wifi"></i>
                             <i class="fa-solid fa-burger"></i>
@@ -183,9 +184,12 @@ if ($usermail == true){
                         </div>
                         <button class="btn btn-primary bookbtn" onclick="openbookbox()">Book</button>
                     </div>
+                </div>
 
-                    <div id="second-room">
-                        <h3>Delux Room</h3>
+                <div class="room-box">
+                    <div class="hotelphoto h2"></div>
+                    <div class="room-data">
+                        <h2>Delux Room</h2>
                         <div class="services">
                             <i class="fa-solid fa-wifi"></i>
                             <i class="fa-solid fa-burger"></i>
@@ -194,9 +198,12 @@ if ($usermail == true){
                         </div>
                         <button class="btn btn-primary bookbtn" onclick="openbookbox()">Book</button>
                     </div>
+                </div>
 
-                    <div id="third-room">
-                        <h3>Guest Room</h3>
+                <div class="room-box">
+                    <div class="hotelphoto h3"></div>
+                    <div class="room-data">
+                        <h2>Guest Room</h2>
                         <div class="services">
                             <i class="fa-solid fa-wifi"></i>
                             <i class="fa-solid fa-burger"></i>
@@ -204,9 +211,12 @@ if ($usermail == true){
                         </div>
                         <button class="btn btn-primary bookbtn" onclick="openbookbox()">Book</button>
                     </div>
+                </div>
 
-                    <div id="fourth-room">
-                        <h3>Single Room</h3>
+                <div class="room-box">
+                    <div class="hotelphoto h4"></div>
+                    <div class="room-data">
+                        <h2>Single Room</h2>
                         <div class="services">
                             <i class="fa-solid fa-wifi"></i>
                             <i class="fa-solid fa-burger"></i>
@@ -214,6 +224,7 @@ if ($usermail == true){
                         <button class="btn btn-primary bookbtn" onclick="openbookbox()">Book</button>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
