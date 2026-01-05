@@ -22,6 +22,7 @@ if ($usermail == true){
     <title>Ugur Hotel</title>
     <link rel="stylesheet" href="./admin/css/roombook.css">
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
 
@@ -40,7 +41,7 @@ if ($usermail == true){
     <section id="firstsection">
 
         <div class="inner">
-            <img src="./img/hotel 5.png" alt="hotel" id="main-start-img">
+            <img src="./img/hotel 5.png" alt="hotel" class="main-start-img">
             <div id="welcome-line">
                 <h1 class="welcometag">Welcome to heaven on earth</h1>
             </div>
@@ -165,7 +166,56 @@ if ($usermail == true){
     </section>
 
     <section id="secondsection">
+        <div id="our-room-section">
+            <!-- <img src="./img/background-rooms.jpg" alt="background-of-rooms" class="main-start-img"> -->
+            <div>
+                <h2>Our Rooms</h2>
+                <div id="room-data">
 
+                    <div id="first-room">
+                        <h3>Superior Room</h3>
+                        <div class="services">
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-solid fa-burger"></i>
+                            <i class="fa-solid fa-spa"></i>
+                            <i class="fa-solid fa-dumbbell"></i>
+                            <i class="fa-solid fa-person-swimming"></i>
+                        </div>
+                        <button class="btn btn-primary bookbtn" onclick="openbookbox()">Book</button>
+                    </div>
+
+                    <div id="second-room">
+                        <h3>Delux Room</h3>
+                        <div class="services">
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-solid fa-burger"></i>
+                            <i class="fa-solid fa-spa"></i>
+                            <i class="fa-solid fa-dumbbell"></i>
+                        </div>
+                        <button class="btn btn-primary bookbtn" onclick="openbookbox()">Book</button>
+                    </div>
+
+                    <div id="third-room">
+                        <h3>Guest Room</h3>
+                        <div class="services">
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-solid fa-burger"></i>
+                            <i class="fa-solid fa-spa"></i>
+                        </div>
+                        <button class="btn btn-primary bookbtn" onclick="openbookbox()">Book</button>
+                    </div>
+
+                    <div id="fourth-room">
+                        <h3>Single Room</h3>
+                        <div class="services">
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-solid fa-burger"></i>
+                        </div>
+                        <button class="btn btn-primary bookbtn" onclick="openbookbox()">Book</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 </body>
