@@ -91,7 +91,7 @@ CREATE TABLE `signup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `signup` (`UserID`, `Username`, `Email`, `Password`) VALUES
-(1, 'Tushar Pankhaniya', 'tusharpankhaniya2202@gmail.com', '123');
+(1, 'Ugur', 'ugur@gmail.com', '123');
 
 CREATE TABLE `staff` (
   `id` int(30) NOT NULL,
