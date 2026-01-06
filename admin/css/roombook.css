@@ -11,6 +11,8 @@
     /* border: 5px solid red; */
 }
 
+/* HEAD */
+
 .header-part {
     display: flex;
     justify-content: space-between;
@@ -30,6 +32,28 @@
     cursor: pointer;
 }
 
+/* TWO COLS */
+
 .middle-part {
-    
+    display: flex;
+    /* justify-content: center; */
+    align-items: start;
+}
+
+.guest-info, .reservation-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.guest-info {
+    width: 50%;
+}
+
+.line {
+    width: 10px;
+    height: 100%
+}
+
+.reservation-info {
+    width: 50%;
 }
