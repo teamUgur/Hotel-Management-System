@@ -24,6 +24,8 @@ if ($usermail == true){
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <script type="module" src="./js/index.js"></script>
+    <!-- sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
 
@@ -159,7 +161,11 @@ if ($usermail == true){
                 $cout = $_POST['cout'];
 
                 if ($name === "" || $email === "" || $phone === "") {
-                    echo "<script>alert('Fill the proper information');</script>";
+                    echo "<script> swal({
+                        title: 'Fill the proper details',
+                        icon: 'error',
+                    });
+                    </script>";
                 } else {
                     $stat = 'Not Confirmed';
                     $sql = "INSERT INTO roombook (Name, Email, Country, Phone, RoomType, Bed, Meal, NoofRoom, cin, cout, stat, nodays) 
@@ -167,9 +173,17 @@ if ($usermail == true){
                     $result = mysqli_query($conn, $sql);
 
                     if ($result) {
-                        echo "<script>alert('Reservation successful')</script>";
+                        echo "<script>swal({
+                                title: 'Reservation successful',
+                                icon: 'success',
+                            });
+                        </script>";
                     } else {
-                        echo "<script>alert('Something went wrong')</script>";
+                        echo "<script>swal({
+                                    title: 'Something went wrong',
+                                    icon: 'error',
+                                });
+                        </script>";
                     }
                 } 
             }
