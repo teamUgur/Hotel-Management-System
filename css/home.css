@@ -248,5 +248,8 @@ a {
 
 /* roombookcss */
 
+#guestdetailpanel {
+    display: none;
+}
 
 /* responsive stuff */

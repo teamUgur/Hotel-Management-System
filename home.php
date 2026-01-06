@@ -23,6 +23,7 @@ if ($usermail == true){
     <link rel="stylesheet" href="./admin/css/roombook.css">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script type="module" src="./js/index.js"></script>
 </head>
 <body>
 
@@ -56,7 +57,7 @@ if ($usermail == true){
 
                 <div class="header-part">
                     <h3>Reservation</h3>
-                    <i class="fa-solid fa-circle-xmark" onclick="closebox()"></i>
+                    <i class="fa-solid fa-circle-xmark" id="closeBtn"></i>
                 </div>
 
                 <div class="middle-part">
@@ -186,7 +187,7 @@ if ($usermail == true){
                             <i class="fa-solid fa-dumbbell"></i>
                             <i class="fa-solid fa-person-swimming"></i>
                         </div>
-                        <button class="btn btn-primary bookbtn" onclick="openbookbox()">Book</button>
+                        <button class="btn btn-primary bookbtn">Book</button>
                     </div>
                 </div>
 
@@ -200,7 +201,7 @@ if ($usermail == true){
                             <i class="fa-solid fa-spa"></i>
                             <i class="fa-solid fa-dumbbell"></i>
                         </div>
-                        <button class="btn btn-primary bookbtn" onclick="openbookbox()">Book</button>
+                        <button class="btn btn-primary bookbtn">Book</button>
                     </div>
                 </div>
 
@@ -213,7 +214,7 @@ if ($usermail == true){
                             <i class="fa-solid fa-burger"></i>
                             <i class="fa-solid fa-spa"></i>
                         </div>
-                        <button class="btn btn-primary bookbtn" onclick="openbookbox()">Book</button>
+                        <button class="btn btn-primary bookbtn">Book</button>
                     </div>
                 </div>
 
@@ -225,7 +226,7 @@ if ($usermail == true){
                             <i class="fa-solid fa-wifi"></i>
                             <i class="fa-solid fa-burger"></i>
                         </div>
-                        <button class="btn btn-primary bookbtn" onclick="openbookbox()">Book</button>
+                        <button class="btn btn-primary bookbtn">Book</button>
                     </div>
                 </div>
 
