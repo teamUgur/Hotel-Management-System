@@ -1,30 +1,54 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 #guestdetailpanel {
     display: none;
     position: fixed;
     z-index: 4000;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     justify-content: center;
     background-color: #00000079;
-    /* border: 5px solid red; */
+}
+
+#guestdetailpanel .guestdetailpanelform{
+    height: 620px;
+    width: 1170px;
+    background-color: #ccdff4;
+    border-radius: 10px;  
+    /* temp */
+    position: relative;
+    top: 20px;
+    animation: guestinfoform .3s ease;
+}
+a{
+    color: black;
+}
+
+@keyframes guestinfoform{
+    0%{
+        transform: translateY(50px);
+    }
 }
 
 /* HEAD */
 
 .header-part {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 40px;
     padding: 0 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header-part h3 {
+    color: #111f49;
     position: relative;
     left: 40%;
-    color: #111f49;
+    margin-top: 10px;
 }
 
 .header-part i {
@@ -35,25 +59,39 @@
 /* TWO COLS */
 
 .middle-part {
+    width: 100%;
+    height: 500px;
+    margin: 10px 0 0 0;
     display: flex;
-    /* justify-content: center; */
-    align-items: start;
 }
 
 .guest-info, .reservation-info {
+    width: 100%;
+    background-color: rgba(155, 187, 255, 0.752);
+    padding: 20px;
     display: flex;
     flex-direction: column;
-}
-
-.guest-info {
-    width: 50%;
+    align-items: center;
 }
 
 .line {
     width: 10px;
-    height: 100%
+    height: 100%;
+    /* background-color: rgb(211, 230, 255); */
 }
 
-.reservation-info {
-    width: 50%;
+.footer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
 }
+
+.btn-success {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    font-weight: 700;
+    border: none;
+}
+

@@ -124,7 +124,7 @@ if ($usermail == true){
                             <option value="full-board">Full Board</option>
                         </select>
 
-                        <div>
+                        <div class="check-in-out">
                             <span id="check-in">
                                 <label for="cin">Check In</label>
                                 <input name="cin" type="date">
@@ -138,7 +138,6 @@ if ($usermail == true){
                     </div>
                 </div>
 
-                
                 <div class="footer">
                     <button class="btn btn-success" name="guestdetailsubmit">Submit</button>
                 </div>
@@ -151,7 +150,7 @@ if ($usermail == true){
                 $email = $_POST['Email'];
                 $country = $_POST['Country'];
                 $phone = $_POST['Phone'];
-                $roomType = $_POST['roomType'];
+                $roomType = $_POST['RoomType'];
                 $bed = $_POST['Bed'];
                 $meal = $_POST['Meal'];
                 $NoofRoom = $_POST['NoofRoom'];
@@ -162,7 +161,7 @@ if ($usermail == true){
                     echo "<script>alert('Fill the proper information');</script>";
                 } else {
                     $stat = 'Not Confirmed';
-                    $sql = "INSERT INTO roombook (Name, Email, Country, Phone, roomType, Bed, Meal, NoofRoom, cin, cout, stat, nodays) 
+                    $sql = "INSERT INTO roombook (Name, Email, Country, Phone, RoomType, Bed, Meal, NoofRoom, cin, cout, stat, nodays) 
                     VALUES ('$name', '$email', '$country', '$phone', '$roomType', '$bed', '$meal', '$NoofRoom', '$cin', '$cout', '$stat', datediff('$cout', '$cin')";
                     $result = mysqli_query($conn, $sql);
 
@@ -280,7 +279,7 @@ if ($usermail == true){
             <i class="fa-solid fa-envelope"></i>
         </div>
         <div class="createdby">
-            <h5>Created by @tushar</h5>
+            <h5>Created by @teamUgur</h5>
         </div>
     </section>
 

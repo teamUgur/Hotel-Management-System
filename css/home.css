@@ -46,6 +46,12 @@ a {
 
 /* FIRST HOME SECTION */
 
+/* #firstsection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
 .img-back-section {
     position: relative;
     width: 100%;
