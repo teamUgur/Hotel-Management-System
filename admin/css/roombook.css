@@ -1,0 +1,35 @@
+#guestdetailpanel {
+    display: none;
+    position: fixed;
+    z-index: 4000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background-color: #00000079;
+    /* border: 5px solid red; */
+}
+
+.header-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 10px;
+}
+
+.header-part h3 {
+    position: relative;
+    left: 40%;
+    color: #111f49;
+}
+
+.header-part i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.middle-part {
+    
+}

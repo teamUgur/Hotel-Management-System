@@ -81,55 +81,57 @@ if ($usermail == true){
                     ?>
 
                     <input type="text" name="Phone" placeholder="Enter your phone number">
-                </div>
 
-                <div class="line"></div>
+                    <div class="line"></div>
 
-                <div class="reservation-info">
-                    <h4>Reservation information</h4>
+                    <div class="reservation-info">
+                        <h4>Reservation information</h4>
 
-                    <select name="RoomType" id="type-of-room">
-                        <option value selected>Type of Room</option>
-                        <option value="Superior room">Superior room</option>
-                        <option value="Deluxe room">Deluxe room</option>
-                        <option value="Guest house">Guest house</option>
-                        <option value="Single room">Single room</option>
-                    </select>
+                        <select name="RoomType" id="type-of-room">
+                            <option value selected>Type of Room</option>
+                            <option value="Superior room">Superior room</option>
+                            <option value="Deluxe room">Deluxe room</option>
+                            <option value="Guest house">Guest house</option>
+                            <option value="Single room">Single room</option>
+                        </select>
 
-                    <select name="Bed" id="bedding-type">
-                        <option value selected>Begging Type</option>
-                        <option value="single">Single</option>
-                        <option value="double">Double</option>
-                        <option value="triple">Triple</option>
-                        <option value="quad">Quad</option>
-                        <option value="none">None</option>
-                    </select>
+                        <select name="Bed" id="bedding-type">
+                            <option value selected>Begging Type</option>
+                            <option value="single">Single</option>
+                            <option value="double">Double</option>
+                            <option value="triple">Triple</option>
+                            <option value="quad">Quad</option>
+                            <option value="none">None</option>
+                        </select>
 
-                    <select name="NoofRoom" id="number-of-room">
-                        <option value selected>Number of room</option>
-                        <option value="1">1</option>
-                    </select>
+                        <select name="NoofRoom" id="number-of-room">
+                            <option value selected>Number of room</option>
+                            <option value="1">1</option>
+                        </select>
 
-                    <select name="Meal" id="meal">
-                        <option value selected>Meal</option>
-                        <option value="room-only">Room Only</option>
-                        <option value="breakfast">Breakfast</option>
-                        <option value="half-board">Half Board</option>
-                        <option value="full-board">Full Board</option>
-                    </select>
+                        <select name="Meal" id="meal">
+                            <option value selected>Meal</option>
+                            <option value="room-only">Room Only</option>
+                            <option value="breakfast">Breakfast</option>
+                            <option value="half-board">Half Board</option>
+                            <option value="full-board">Full Board</option>
+                        </select>
 
-                    <div>
-                        <span id="check-in">
-                            <label for="cin">Check In</label>
-                            <input name="cin" type="date">
-                        </span>
+                        <div>
+                            <span id="check-in">
+                                <label for="cin">Check In</label>
+                                <input name="cin" type="date">
+                            </span>
 
-                        <span id="check-out">
-                            <label for="cout">Check Out</label>
-                            <input name="cout" type="date">
-                        </span>
+                            <span id="check-out">
+                                <label for="cout">Check Out</label>
+                                <input name="cout" type="date">
+                            </span>
+                        </div>
                     </div>
                 </div>
+
+                
                 <div class="footer">
                     <button class="btn btn-success" name="guestdetailsubmit">Submit</button>
                 </div>
