@@ -74,15 +74,16 @@ if ($usermail == true){
                         ?>
 
                         <select name="Country" class="selectinput">
+
                             <option value selected>Select your Country</option>
+                        
+                            <?php
+                            foreach($countries as $key => $value):
+                                echo '<option value="'.$value.'">'.$value.'</option>';
+                                endforeach;
+                            ?>
+
                         </select>
-
-                        <?php
-                        foreach($countries as $key => $value):
-                            echo '<option value="'.$value.'">'.$value.'</option>';
-                            endforeach;
-                        ?>
-
                         <input type="text" name="Phone" placeholder="Enter your phone number">
                     </div>
                     
