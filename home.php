@@ -30,7 +30,12 @@ if ($usermail == true){
 <body>
 
     <nav>
-        <img src="./img/logo.png" alt="logo" id="logo">
+
+        <div class="img-s">
+            <img src="./img/logo.png" alt="logo" id="logo">
+            <img src="./img/menu.png" alt="menu" id="menu">
+        </div>
+
         <ul id="nav-bar">
             <li><a href="#firstsection">Home</a></li>
             <li><a href="#secondsection">Rooms</a></li>
