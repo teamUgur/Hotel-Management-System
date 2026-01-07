@@ -23,7 +23,12 @@ bookBox.addEventListener("click", function(event) {
 // For responsive design:
 
 const menu = document.getElementById("menu");
-const navBar = document.getElementById("nav-bar")
+const navBar = document.getElementById("nav-bar");
+
+const linkOne = document.getElementById("link-1");
+const linkTwo = document.getElementById("link-2");
+const linkThree = document.getElementById("link-3");
+const linkFour = document.getElementById("link-4");
 
 menu.addEventListener("click", function() {
     if (navBar.style.display === "none") {
@@ -31,5 +36,21 @@ menu.addEventListener("click", function() {
     } else {
         navBar.style.display = "none";
     }
-    
 })
+
+linkOne.addEventListener('click', function() {
+    navBar.style.display = "none";
+})
+
+linkTwo.addEventListener('click', function() {
+    navBar.style.display = "none";
+})
+
+linkThree.addEventListener('click', function() {
+    navBar.style.display = "none";
+})
+
+linkFour.addEventListener('click', function() {
+    navBar.style.display = "none";
+})
+

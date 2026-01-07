@@ -37,10 +37,10 @@ if ($usermail == true){
         </div>
 
         <ul id="nav-bar">
-            <li><a href="#firstsection">Home</a></li>
-            <li><a href="#secondsection">Rooms</a></li>
-            <li><a href="#thirdsection">Facilities</a></li>
-            <li><a href="#contactus">Connect Us</a></li>
+            <li><a href="#firstsection" id="link-1">Home</a></li>
+            <li><a href="#secondsection" id="link-2">Rooms</a></li>
+            <li><a href="#thirdsection" id="link-3">Facilities</a></li>
+            <li><a href="#contactus" id="link-4">Connect Us</a></li>
             <a href="./logout.php"><button class="btn btn-danger">Logout</button></a>
         </ul>
 
