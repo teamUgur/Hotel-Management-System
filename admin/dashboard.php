@@ -56,6 +56,7 @@ $chart_data = substr($chart_data, 0, -2);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dasboard</title>
     <link rel="stylesheet" href="./css/dashboard.css">
+    <!-- chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -130,6 +131,17 @@ $chart_data = substr($chart_data, 0, -2);
 </script>
 
 <script>
-
+    const profitData = [<?php echo $chart_data; ?>];
+    new Chart(document.getElementById('profit-canvas'), {
+        type: 'bar',
+        data: {
+            labels: profitData.map(item => item.date),
+            datasets: [{
+                label: 'Profit',
+                data: profitData.map(item => item.profit),
+                backgroundColor: '#9966FF'
+            }]
+        }
+    });
 </script>
 </html>

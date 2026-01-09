@@ -37,7 +37,7 @@ CREATE TABLE `payment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `payment` (`id`, `Name`, `Email`, `RoomType`, `Bed`, `NoofRoom`, `cin`, `cout`, `noofdays`, `roomtotal`, `bedtotal`, `meal`, `mealtotal`, `finaltotal`) VALUES
-(41, 'Tushar pankhaniya', 'pankhaniyatushar9@gmail.com', 'Single Room', 'Single', 1, '2022-11-09', '2022-11-10', 1, 1000.00, 10.00, 'Room only', 0.00, 1010.00);
+(41, 'Ugur Kub', 'ugur@gmail.com', 'Single Room', 'Single', 1, '2025-12-29', '2026-01-09', 12, 100000.00, 1000.00, 'Room only', 0.00, 10000.00);
 
 CREATE TABLE `room` (
   `id` int(30) NOT NULL,
@@ -81,7 +81,7 @@ CREATE TABLE `roombook` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `roombook` (`id`, `Name`, `Email`, `Country`, `Phone`, `RoomType`, `Bed`, `Meal`, `NoofRoom`, `cin`, `cout`, `nodays`, `stat`) VALUES
-(41, 'Tushar pankhaniya', 'pankhaniyatushar9@gmail.com', 'India', '9313346569', 'Single Room', 'Single', 'Room only', '1', '2022-11-09', '2022-11-10', 1, 'Confirm');
+(41, 'Ugur Kub', 'ugur@gmail.com', 'Russia', '9313346569', 'Single Room', 'Single', 'Room only', '1', '2025-12-29', '2022-11-10', 1, 'Confirm');
 
 CREATE TABLE `signup` (
   `UserID` int(100) NOT NULL,
