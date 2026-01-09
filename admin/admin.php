@@ -42,13 +42,15 @@ if ($usermail == true) {
 
     <nav id="side-nav">
         <ul>
-            <li class="page-btn active"><img src="../img/dashboard.png" alt="logo">&nbsp; Dashboard</li>
-            <li class="page-btn"><img src="../img/booking.png" alt="logo">&nbsp; Room Booking</li>
-            <li class="page-btn"><img src="../img/credit-card.png" alt="logo">&nbsp; Payment</li>
-            <li class="page-btn"><img src="../img/bed.png" alt="logo">&nbsp; Rooms</li>
-            <li class="page-btn"><img src="../img/team.png" alt="logo">&nbsp; Staff</li>
+            <li class="page-btn active"><img src="../img/dashboard.png" alt="logo">&nbsp;&nbsp;&nbsp; Dashboard</li>
+            <li class="page-btn"><img src="../img/booking.png" alt="logo">&nbsp;&nbsp;&nbsp; Room Booking</li>
+            <li class="page-btn"><img src="../img/credit-card.png" alt="logo">&nbsp;&nbsp;&nbsp; Payment</li>
+            <li class="page-btn"><img src="../img/bed.png" alt="logo">&nbsp;&nbsp;&nbsp; Rooms</li>
+            <li class="page-btn"><img src="../img/team.png" alt="logo">&nbsp;&nbsp;&nbsp; Staff</li>
         </ul>
     </nav>
+
+    <script src="./js/script.js"></script>
 
 </body>
 </html>
