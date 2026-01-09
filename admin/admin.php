@@ -37,11 +37,17 @@ if ($usermail == true) {
         <div id="log-out">
             <a href="./logout.php"><button class="btn btn-danger">Logout</button></a>
         </div>
-        
+
     </nav>
 
     <nav id="side-nav">
-
+        <ul>
+            <li class="page-btn active"><img src="../img/dashboard.png" alt="logo">&nbsp; Dashboard</li>
+            <li class="page-btn"><img src="../img/booking.png" alt="logo">&nbsp; Room Booking</li>
+            <li class="page-btn"><img src="../img/credit-card.png" alt="logo">&nbsp; Payment</li>
+            <li class="page-btn"><img src="../img/bed.png" alt="logo">&nbsp; Rooms</li>
+            <li class="page-btn"><img src="../img/team.png" alt="logo">&nbsp; Staff</li>
+        </ul>
     </nav>
 
 </body>
