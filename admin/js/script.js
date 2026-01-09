@@ -1,5 +1,5 @@
 const pageBtns = document.querySelectorAll(".page-btn");
-const activeBtn = document.querySelector(".active");
+const activeBtn = document.querySelector(".active-btn");
 
 pageBtns.forEach(button => {
     button.addEventListener("mouseenter", function() {
