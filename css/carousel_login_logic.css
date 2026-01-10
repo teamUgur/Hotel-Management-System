@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 /* Carousel LOGIC!  */
@@ -186,17 +188,15 @@ form button {
 
 /* DESKTOPS (1025px - 1200px) */
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
-    
+
     .login-signup-section {
-        width: 566px; 
-        left: 567px;;
+        width: 566px;
+        left: 567px;
     }
 
     .carusel-container {
-        width: 50%;
-        height: 100vh;
-        overflow: hidden;
-        position: relative;
+        top: 80px;
     }
+
 }
 
