@@ -55,7 +55,7 @@ $chart_data = substr($chart_data, 0, -2);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dasboard</title>
-    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="/admin/css/dashboard.css">
     <!-- chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -81,12 +81,12 @@ $chart_data = substr($chart_data, 0, -2);
 
     <div id="charts-box">
 
-        <div class="booked-room-chart">
+        <div class="booked-room-chart lower-stat">
             <canvas id="booked-room-canvas"></canvas>
             <h3>Booked Room</h3>
         </div>
 
-        <div class="profit-bars">
+        <div class="profit-bars lower-stat">
             <canvas id="profit-canvas"></canvas>
             <h3>Profit</h3>
         </div>
