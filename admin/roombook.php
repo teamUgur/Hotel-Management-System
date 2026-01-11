@@ -179,6 +179,11 @@ include "../config.php"
         if($availableFour <= 0) {
             $availableFour = "No";
         }
+
+        $availableFive = $totalRooms - $totalPayment;
+        if($availableFive <= 0) {
+            $availableFive = "No";
+        }
         ?>
 </body>
 </html>
