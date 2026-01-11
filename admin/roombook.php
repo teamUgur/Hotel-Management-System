@@ -99,7 +99,86 @@ include "../config.php"
         <!-- room availablity start-->
 
         <?php
+
+        // ROOM
         
+        $roomSqlDb = 'SELECT * FROM room';
+        $roomQueryDb = mysqli_query($conn, $roomSqlDb);
+
+        $totalRooms = 0;
+        $superiorRoom = 0;
+        $deluxeRoom = 0;
+        $singleRoom = 0;
+        $guestRoom = 0;
+
+        while($numberRowsRooms = mysqli_fetch_array($roomQueryDb)) {
+            $totalRooms = $totalRooms + 1;
+            $theRoom = $numberRowsRooms['type'];
+
+            if ($theRoom == "Superior Room") {
+                $superiorRoom = $superiorRoom + 1;
+            }
+            if ($theRoom == "Deluxe Room") {
+                $deluxeRoom = $deluxeRoom + 1;
+            }
+            if ($theRoom == "Guest House") {
+                $singleRoom = $singleRoom + 1;
+            }
+            if ($theRoom == "Single Room") {
+                $guestRoom = $guestRoom + 1;
+            }
+        }
+
+        // PAYMENT
+
+        $paymentSqlDb = "SELECT * FROM payment";
+        $paymentQueryDb = mysqli_query($conn, $paymentSqlDb);
+
+        $totalPayment = 0;
+        $superiorPayment = 0;
+        $deluxePayment = 0;
+        $singlePayment = 0;
+        $guestPayment = 0;
+
+        while($numberRowsPayment = mysqli_fetch_array($paymentQueryDb)) {
+            $totalPayment = $totalPayment + 1;
+            $thePayment = $numberRowsPayment['RoomType'];
+
+            if ($thePayment == "Superior Room") {
+                $superiorPayment = $superiorPayment + 1;
+            }
+            if ($thePayment == "Deluxe Room") {
+                $deluxePayment = $deluxePayment + 1;
+            }
+            if ($thePayment == "Guest House") {
+                $singlePayment = $singlePayment + 1;
+            }
+            if ($thePayment == "Single Room") {
+                $guestPayment = $guestPayment + 1;
+            }
+        }
+
+        // AVAILABILITY
+
+        $availableOne = $superiorRoom - $superiorPayment;
+        if($availableOne <= 0) {
+            $availableOne = "No";
+        }
+
+        $availableTwo = $deluxeRoom - $deluxePayment;
+        if($availableTwo <= 0) {
+            $availableTwo = "No";
+        }
+
+        $availableThree = $singleRoom - $singlePayment;
+        if($availableThree <= 0) {
+            $availableThree = "No";
+        }
+
+        $availableFour = $guestRoom - $guestPayment;
+        if($availableFour <= 0) {
+            $availableFour = "No";
+        }
         ?>
 </body>
 </html>
