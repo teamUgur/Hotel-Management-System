@@ -204,6 +204,63 @@ include "../config.php"
         }
         ?>
 
+        <!-- room book php -->
+
+        <?php
+
+        if($_POST['guestdetailsubmit']) {
+            $name = $_POST['Name'];
+            $email = $_POST['Email'];
+            $country = $_POST['Country'];
+            $phone = $_POST['Phone'];
+            $roomtype = $_POST['RoomType'];
+            $bed = $_POST['Bed'];
+            $meal = $_POST['Meal'];
+            $noofroom = $_POST['NoofRoom'];
+            $cin = $_POST['cin'];
+            $cout = $_POST['cout'];
+
+
+            if ($name == '' || $email == "" || $country == "") {
+                echo "<script>swal({
+                    title: 'Fill the proper details',
+                    icon: 'error',
+                });
+                </script>";
+            } else {
+                $stat = "NotConfirm";
+                $sql = "INSERT INTO roombook (Name, Email, Country, Phone, RoomType, Bed, Meal, NoofRoom, cin, cout, stat, nodays)
+                VALUES ('$name', '$email', '$country', '$phone', '$roomtype', '$bed', '$meal', '$noofroom', '$cin', '$cout', '$stat', date_diff('$cout', '$cin'))";
+                $result = mysqli_query($conn, $sql);
+
+                if ($result) {
+                    echo "<script>swal({
+                        title: 'Reservation successful',
+                        icon: 'success',
+                    });
+                    </script>";
+                } else {
+                    echo "<script>swal({
+                        title: 'Something went wrong',
+                        icon: 'error',
+                    });
+                    </script>";
+                }
+            }
+        }
+
+        ?>
+
+        <!-- HTML for this page -->
+
+        <div class="searchsection">
+            <input type="text" name="search_bar" id="search_bar" placeholder="search..." onkeyup="searchFun()">
+            <button class="adduser" id="adduser" onclick="adduseropen()"><i class="fa-solid fa-bookmark"></i> Add</button>
+            <form action="./exportdata.php" method="post">
+                <button class="exportexcel" id="exportexcel" name="exportexcel" type="submit"><i class="fa-solid fa-file-arrow-down"></i></button>
+            </form>
+        </div>
+
         
 </body>
 </html>
