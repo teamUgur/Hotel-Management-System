@@ -4,17 +4,18 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#guestdetailpanel {
-    display: none;
-    position: fixed;
-    z-index: 4000;
-    width: 100%;
+/* guest panel */
+
+#guestdetailpanel{
+    position : fixed;
+    z-index: 1000;
     height: 100%;
+    width: 100%;
+    display: none;
+    /* display: flex; */
     justify-content: center;
-    align-items: center; 
+    /* align-items: center; */
     background-color: #00000079;
-    top: 0; 
-    left: 0; 
 }
 
 #guestdetailpanel .guestdetailpanelform{
@@ -25,11 +26,20 @@ body {
     /* temp */
     position: relative;
     top: 20px;
+    animation: guestinfoform .3s ease;
+}
+a{
+    color: black;
 }
 
-/* HEAD */
+@keyframes guestinfoform{
+    0%{
+        transform: translateY(50px);
+    }
+}
 
-.header-part {
+.guestdetailpanelform .head{
+    /* width: 100%; */
     padding: 0 10px;
     height: 40px;
     display: flex;
@@ -37,28 +47,34 @@ body {
     justify-content: space-between;
 }
 
-.header-part h3 {
+.guestdetailpanelform .head h3{
     color: #111f49;
     position: relative;
-    left: 45%;
+    left: 40%;
     margin-top: 10px;
 }
-
-.header-part i {
+.guestdetailpanelform .head i{
     font-size: 25px;
     cursor: pointer;
 }
 
-/* TWO COLS */
-
-.middle-part {
+.guestdetailpanelform .middle{
     width: 100%;
     height: 500px;
     margin: 10px 0 0 0;
     display: flex;
 }
 
-.guest-info, .reservation-info {
+.guestdetailpanelform .middle .guestinfo{
+    width: 100%;
+    background-color: rgba(155, 187, 255, 0.752);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.guestdetailpanelform .middle .reservationinfo{
+    
     width: 100%;
     background-color: rgba(155, 187, 255, 0.752);
     padding: 20px;
@@ -67,56 +83,61 @@ body {
     align-items: center;
 }
 
-.line {
+.line{
     width: 10px;
-    height: 100%;
+    height: 100%
 }
 
-.footer {
+.guestdetailpanelform .footer{
     height: 50px;
     display: flex;
     justify-content: center;
     margin: 10px;
 }
 
-.btn-success {
-    padding: 10px 20px;
-    background-color: green;
-    color: white;
-    font-weight: 700;
-    border: none;
-    border-radius: 10px;
-}
-
-.middle-part input,
-.middle-part select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+.middle input,.selectinput{
     width: 100%;
     border: none;
     background-color: #d1d7ff;
-    padding: 15px 10px;
+    padding: 10px;
     margin: 10px 0;
     border-radius: 20px;
-    box-sizing: border-box; 
-    font-size: 15px;
 }
 
-.check-in-out {
+.datesection{
     display: flex;
-    width: 100%;
-    gap: 10px; 
-    font-size: 15px;
-    margin-top: 5px;
 }
 
-.check-in-out span {
-    flex: 1; 
-    margin: 0; 
+.datesection span{
+    margin: 5px;
 }
 
-.check-in-out span input {
+/* room book table */
+.roombooktable{
+    position: absolute;
+    color: #0a0d2d;
+    margin-top: 80px;
     width: 100%;
-    box-sizing: border-box;
+    height: 100vh;
+
+    /* padding bottom to add space */
+    padding-bottom: 900px;
+}
+.roombooktable thead{
+    background-color:  #0a0d2d;
+    color: white;
+    text-align: center;
+}
+.roombooktable tbody{
+    text-align: center;
+}
+
+.action a{
+    text-decoration: none;
+}
+
+.action button{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
 }
