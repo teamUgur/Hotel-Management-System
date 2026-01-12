@@ -290,7 +290,42 @@ include "../config.php"
             </thead>
 
             <tbody>
-
+                <tbody>
+                <?php
+                while ($res = mysqli_fetch_array($roombookresult)) {
+                ?>
+                    <tr>
+                        <td><?php echo $res['id'] ?></td>
+                        <td><?php echo $res['Name'] ?></td>
+                        <td><?php echo $res['Email'] ?></td>
+                        <td><?php echo $res['Country'] ?></td>
+                        <td><?php echo $res['Phone'] ?></td>
+                        <td><?php echo $res['RoomType'] ?></td>
+                        <td><?php echo $res['Bed'] ?></td>
+                        <td><?php echo $res['NoofRoom'] ?></td>
+                        <td><?php echo $res['Meal'] ?></td>
+                        <td><?php echo $res['cin'] ?></td>
+                        <td><?php echo $res['cout'] ?></td>
+                        <td><?php echo $res['nodays'] ?></td>
+                        <td><?php echo $res['stat'] ?></td>
+                        <td class="action">
+                            <?php
+                                if($res['stat'] == "Confirm")
+                                {
+                                    echo " ";
+                                }
+                                else
+                                {
+                                    echo "<a href='roomconfirm.php?id=". $res['id'] ."'><button class='btn btn-success'>Confirm</button></a>";
+                                }
+                            ?>
+                            <a href="roombookedit.php?id=<?php echo $res['id'] ?>"><button class="btn btn-primary">Edit</button></a>
+                            <a href="roombookdelete.php?id=<?php echo $res['id'] ?>"><button class='btn btn-danger'>Delete</button></a>
+                        </td>
+                    </tr>
+                <?php
+                }
+                ?>
             </tbody>
         </div>
 </body>
