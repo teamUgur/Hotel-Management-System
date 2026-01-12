@@ -261,6 +261,37 @@ include "../config.php"
             </form>
         </div>
 
-        
+        <div class="roombooktable">
+
+            <?php
+            $roombooknums = "SELECT * FROM roombook";
+            $resultRoomBook = mysqli_query($conn, $roombooknums);
+            $numRowRoomBook = mysqli_num_rows($resultRoomBook);
+            ?>
+
+            <table class="table table-bordered" id="table-data">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Type of Room</th>
+                    <th scope="col">Type of Bed</th>
+                    <th scope="col">No of Room</th>
+                    <th scope="col">Meal</th>
+                    <th scope="col">Check-In</th>
+                    <th scope="col">Check-Out</th>
+                    <th scope="col">No of Day</th>
+                    <th scope="col">Status</th>
+                    <th scope="col" class="action">Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+        </div>
 </body>
 </html>
